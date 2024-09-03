@@ -12,13 +12,52 @@
   font-size: 0.875rem;
   line-height: 1.25;
   font-weight: 400;
+
+  /* Colors */
+  --gradient-from: hsl(6 100% 80%);
+  --gradient-to: hsl(335 100% 65%);
+
+  --pale-blue: hsl(243 100% 93%);
+  --grayish-blue: hsl(229 7% 55%);
+  --dark-blue: hsl(228 56% 26%);
+  --very-dark-blue: hsl(229 57% 11%);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  background-color: var(--very-dark-blue);
+
+  background-image: url("./assets/images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 50%;
+}
+
+#storage-remaining::after {
+  --size: 24px;
+
+  position: absolute;
+  content: "";
+  inset: auto 0 calc(var(--size) * -1) auto;
+  translate: 0 -1px;
+  width: var(--size);
+  aspect-ratio: 1/1;
+  background: white;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+@media screen and (width < 768px) {
+  body {
+    background-image: url("./assets/images/bg-mobile.png");
+    background-position: center;
+    background-size: cover;
+  }
 }
