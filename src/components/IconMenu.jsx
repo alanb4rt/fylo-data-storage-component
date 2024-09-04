@@ -8,7 +8,7 @@ export default function IconMenu() {
       {menu.map((icon) => (
         <button
           key={icon}
-          className="grid place-content-center bg-[var(--very-dark-blue)] p-3 rounded-lg size-14"
+          className="grid place-content-center bg-[var(--very-dark-blue)] p-3 rounded-lg size-14 transition-transform hover:-translate-y-1"
         >
           <img
             className="w-full"
