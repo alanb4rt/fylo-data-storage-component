@@ -1,3 +1,5 @@
+import { getImageURL } from "../utils/getImageURL";
+
 export default function IconMenu() {
   const menu = ["document", "folder", "upload"];
 
@@ -10,7 +12,7 @@ export default function IconMenu() {
         >
           <img
             className="w-full"
-            src={`./src/assets/images/icon-${icon}.svg`}
+            src={getImageURL(`icon-${icon}.svg`)}
             alt={`icon ${icon}`}
           />
         </button>
