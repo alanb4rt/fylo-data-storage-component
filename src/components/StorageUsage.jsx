@@ -1,8 +1,9 @@
+import { useState } from "react";
 import Card from "./Card";
 import Progress from "./Progress";
 
 export default function StorageUsage() {
-  const storageUsed = 815;
+  const [storageUsed, setStorageUsed] = useState(815);
   const storageCapacity = 1000;
 
   const storagePercentage = (storageUsed / storageCapacity) * 100;
