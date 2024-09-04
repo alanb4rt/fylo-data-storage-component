@@ -60,4 +60,8 @@ body {
     background-position: center;
     background-size: cover;
   }
+
+  #storage-remaining::after {
+    display: none;
+  }
 }

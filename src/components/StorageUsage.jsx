@@ -20,8 +20,9 @@ export default function StorageUsage() {
 
 function StorageText({ value }) {
   return (
-    <p className="text-[var(--grayish-blue)] font-bold mb-4">
-      You've used <span className="text-[var(--pale-blue)]">{value} GB</span> of
+    <p className="text-[var(--grayish-blue)] mb-4 text-center md:text-left">
+      You've used{" "}
+      <span className="text-[var(--pale-blue)] font-bold">{value} GB</span> of
       your storage
     </p>
   );
@@ -44,12 +45,12 @@ function StorageRemaining({ value }) {
   return (
     <div
       id="storage-remaining"
-      className="absolute -top-12 right-12 bg-white px-6 py-4 rounded-lg rounded-br-none font-bold flex items-center"
+      className="absolute w-fit h-fit -bottom-10 inset-x-0 md:inset-auto md:-top-12 md:right-12 mx-auto bg-white px-6 py-4 rounded-lg md:rounded-br-none font-bold flex items-center"
     >
       <span className="text-4xl mr-2 text-[var(--very-dark-blue)]">
         {value}
       </span>
-      <span className="text-[var(--grayish-blue)]">GB LEFT</span>
+      <span className="text-[var(--grayish-blue)] text-sm">GB LEFT</span>
     </div>
   );
 }

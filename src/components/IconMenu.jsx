@@ -6,9 +6,10 @@ export default function IconMenu() {
       {menu.map((icon) => (
         <button
           key={icon}
-          className="bg-[var(--very-dark-blue)] p-4 rounded-lg"
+          className="grid place-content-center bg-[var(--very-dark-blue)] p-3 rounded-lg size-14"
         >
           <img
+            className="w-full"
             src={`./src/assets/images/icon-${icon}.svg`}
             alt={`icon ${icon}`}
           />
